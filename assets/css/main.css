@@ -1799,6 +1799,10 @@ input, select, textarea {
 			text-transform: uppercase;
 		}
 
+		header.major:hover{
+			color:red;
+		}
+
 		body.is-ie header.major > :first-child:after {
 			max-width: 9em;
 		}

@@ -6,6 +6,24 @@
 -->
 <html>
 
+<style>
+    /* Header class */
+    .hc {
+      font-size: 1.25em;
+      text-align: center;
+    }
+
+    /* Remove default bullet points and add custom ones */
+    ul.custom-bullets {
+      list-style-type: none;
+      padding-left: 20px; /* Add some padding to the left of the list */
+    }
+
+    ul.custom-bullets li::before {
+      content: "\2022"; /* Bullet symbol (●) */
+      margin-right: 10px; /* Adjust spacing between bullet and text */
+    }
+  </style>
 
 
 
@@ -82,14 +100,14 @@
 								<h2>What's going on?</h2>
 							</header>
 
-							<h3>Upcoming</h3>
+							<h3 class="hc">Upcoming</h3>
 							<ul class="custom-bullets">
 								<li>
 									My paper entitled, "Discovering Mesoscale for Chains of Conflict" will soon be published in PNAS Nexus.
 								</li>
 							  </ul>
 
-							  <h3>Past</h3>
+							  <h3 class="hc">Past</h3>
 								<ul class="custom-bullets">
 									<li>
 										Attended the Lipari School on Computational Complex and Social Systems 2023 in Lipari, Italy.
@@ -97,6 +115,7 @@
 									<li>
 										Attended the NetSci conference 2023. Participated as a volunteer who helped in the organizationg of the conference.
 									</li>
+									
 								  </ul>
 						
 					</section>

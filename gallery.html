@@ -19,6 +19,75 @@
 
 		<link rel="stylesheet" href="assets/css/lightbox.css">
 
+		<style>
+			.image-row {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+				gap: 8px;
+				padding: 2em 1em;
+			}
+
+			.image-row a {
+				display: block;
+				overflow: hidden;
+				border-radius: 6px;
+				background: rgba(212, 212, 255, 0.05);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+				cursor: pointer;
+			}
+
+			.image-row a:hover {
+				transform: scale(1.02);
+				box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+			}
+
+			.example-image {
+				width: 100%;
+				height: 280px;
+				object-fit: cover;
+				display: block;
+				transition: opacity 0.3s ease;
+			}
+
+			.image-row a:hover .example-image {
+				opacity: 0.9;
+			}
+
+			/* Responsive breakpoints */
+			@media screen and (max-width: 1200px) {
+				.image-row {
+					grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+				}
+
+				.example-image {
+					height: 240px;
+				}
+			}
+
+			@media screen and (max-width: 768px) {
+				.image-row {
+					grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+					gap: 6px;
+					padding: 1.5em 1em;
+				}
+
+				.example-image {
+					height: 200px;
+				}
+			}
+
+			@media screen and (max-width: 480px) {
+				.image-row {
+					grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+					gap: 4px;
+					padding: 1em 0.5em;
+				}
+
+				.example-image {
+					height: 150px;
+				}
+			}
+		</style>
 
 		<title>Niraj: Gallery</title>
 		<link rel="icon" type="image/png" href="assets/documents/icon_eta.png">
@@ -76,16 +145,16 @@
 							<section id="gallery" class="examples-section">
 
 								<div class="image-row">
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="assets/gallery_images/exner.jpeg" data-lightbox="gallery" data-title="Poster competition of Exner lectures 2023."><img class="example-image" src="assets/gallery_images/exner_tn.jpg" alt="Niraj Kushwaha" /></a>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="assets/gallery_images/board.jpeg" data-lightbox="gallery" data-title="Group meeting at CSH."><img class="example-image" src="assets/gallery_images/board_tn.jpg" alt="Niraj Kushwaha" /></a>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="assets/gallery_images/poster.jpeg" data-lightbox="gallery" data-title="Poster presentation at CCS 2022."><img class="example-image" src="assets/gallery_images/poster_tn.png" alt="Niraj Kushwaha" /></a>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="assets/gallery_images/sciBall.jpeg" data-lightbox="gallery" data-title="Science ball Vienna 2022 with CSH."><img class="example-image" src="assets/gallery_images/sciBall_tn.png" alt="Niraj Kushwaha" /></a>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="assets/gallery_images/board_2.jpeg" data-lightbox="gallery" data-title="Group meeting at CSH."><img class="example-image" src="assets/gallery_images/board_2_tn.png" alt="Niraj Kushwaha" /></a>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="assets/gallery_images/netsci_2023.jpeg" data-lightbox="gallery" data-title="NetSci 2023"><img class="example-image" src="assets/gallery_images/netsci_2023_tn.png" alt="Niraj Kushwaha" /></a>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="assets/gallery_images/random.jpg" data-lightbox="gallery" data-title="Random pic"><img class="example-image" src="assets/gallery_images/random_tn.jpg" alt="Niraj Kushwaha" /></a>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="assets/gallery_images/with_eddie.jpeg" data-lightbox="gallery" data-title="DPG 2024"><img class="example-image" src="assets/gallery_images/with_eddie_tn.jpg" alt="Niraj Kushwaha" /></a>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="assets/gallery_images/DPG.jpg" data-lightbox="gallery" data-title="DPG talk 2024"><img class="example-image" src="assets/gallery_images/DPG_tn.jpg" alt="Niraj Kushwaha" /></a>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="assets/gallery_images/UNODC.jpeg" data-lightbox="gallery" data-title="DPG talk 2024"><img class="example-image" src="assets/gallery_images/UNODC_tn.jpg" alt="Niraj Kushwaha" /></a>
+									<a href="assets/gallery_images/exner.jpeg" data-lightbox="gallery" data-title="Poster competition of Exner lectures 2023."><img class="example-image" src="assets/gallery_images/exner.jpeg" alt="Niraj Kushwaha" /></a>
+									<a href="assets/gallery_images/board.jpeg" data-lightbox="gallery" data-title="Group meeting at CSH."><img class="example-image" src="assets/gallery_images/board.jpeg" alt="Niraj Kushwaha" /></a>
+									<a href="assets/gallery_images/poster.jpeg" data-lightbox="gallery" data-title="Poster presentation at CCS 2022."><img class="example-image" src="assets/gallery_images/poster.jpeg" alt="Niraj Kushwaha" /></a>
+									<a href="assets/gallery_images/sciBall.jpeg" data-lightbox="gallery" data-title="Science ball Vienna 2022 with CSH."><img class="example-image" src="assets/gallery_images/sciBall.jpeg" alt="Niraj Kushwaha" /></a>
+									<a href="assets/gallery_images/board_2.jpeg" data-lightbox="gallery" data-title="Group meeting at CSH."><img class="example-image" src="assets/gallery_images/board_2.jpeg" alt="Niraj Kushwaha" /></a>
+									<a href="assets/gallery_images/netsci_2023.jpeg" data-lightbox="gallery" data-title="NetSci 2023"><img class="example-image" src="assets/gallery_images/netsci_2023.jpeg" alt="Niraj Kushwaha" /></a>
+									<a href="assets/gallery_images/random.jpg" data-lightbox="gallery" data-title="Random pic"><img class="example-image" src="assets/gallery_images/random.jpg" alt="Niraj Kushwaha" /></a>
+									<a href="assets/gallery_images/with_eddie.jpeg" data-lightbox="gallery" data-title="DPG 2024"><img class="example-image" src="assets/gallery_images/with_eddie.jpeg" alt="Niraj Kushwaha" /></a>
+									<a href="assets/gallery_images/DPG.jpg" data-lightbox="gallery" data-title="DPG talk 2024"><img class="example-image" src="assets/gallery_images/DPG.jpg" alt="Niraj Kushwaha" /></a>
+									<a href="assets/gallery_images/UNODC.jpeg" data-lightbox="gallery" data-title="DPG talk 2024"><img class="example-image" src="assets/gallery_images/UNODC.jpeg" alt="Niraj Kushwaha" /></a>
 								</div>
 							  </section>
 

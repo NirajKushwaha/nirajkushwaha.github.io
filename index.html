@@ -23,6 +23,43 @@
       content: "\2022"; /* Bullet symbol (●) */
       margin-right: 10px; /* Adjust spacing between bullet and text */
     }
+    /* Publications section */
+    #two, #three {
+      background-size: cover;
+      padding: 3em 2em;
+      width: 100% !important;
+      min-height: auto !important;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      word-break: break-word;
+    }
+
+    #two {
+      background-image: url('assets/images/equations.webp');
+    }
+
+    #three {
+      background-image: url('assets/images/coding_2.gif');
+    }
+
+    /* Responsive adjustments for smaller screens */
+    @media screen and (max-width: 1024px) {
+      #two, #three {
+        padding: 2.5em 1.5em;
+      }
+    }
+
+    @media screen and (max-width: 736px) {
+      #two, #three {
+        padding: 2em 1.2em;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      #two, #three {
+        padding: 1.5em 1em;
+      }
+    }
   </style>
 
 
@@ -303,10 +340,7 @@
 
 
 						<!-- Two -->
-							<section id="two" style="background-image: url('assets/images/equations.webp'); 
-							    width:100%;
-    							height:100%;
-								background-size: cover;">
+							<section id="two">
 								<br>
 									<header class="major">
 										<h2>Publications</h2>
@@ -325,10 +359,7 @@
 								
 							</section>
 
-							<section id="three" style="background-image: url('assets/images/coding_2.gif'); 
-							    width:100%;
-    							height:100%;
-								background-size: cover;">
+							<section id="three">
 								<br>
 									<header class="major">
 										<h2>Python packages and datasets published</h2>

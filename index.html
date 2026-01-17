@@ -36,11 +36,44 @@
 
     #two {
       background-image: url('assets/images/equations.webp');
+			position: relative;
     }
 
     #three {
       background-image: url('assets/images/coding_2.gif');
+			position: relative;
     }
+
+		/* Soft fade between #two and #three to avoid a hard seam */
+		#two::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 40px; /* make this zero to remove the fade */
+			pointer-events: none;
+			background: linear-gradient(to bottom,
+				rgba(36, 41, 67, 0) 0%,
+				rgba(36, 41, 67, 0.6) 70%,
+				rgba(36, 41, 67, 1) 100%
+			);
+		}
+
+		#three::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			height: 40px; /* make this zero to remove the fade */
+			pointer-events: none;
+			background: linear-gradient(to top,
+				rgba(36, 41, 67, 0) 0%,
+				rgba(36, 41, 67, 0.6) 70%,
+				rgba(36, 41, 67, 1) 100%
+			);
+		}
 
     /* Responsive adjustments for smaller screens */
     @media screen and (max-width: 1024px) {
@@ -53,12 +86,14 @@
       #two, #three {
         padding: 2em 1.2em;
       }
+			#two::after, #three::before { height: 90px; }
     }
 
     @media screen and (max-width: 480px) {
       #two, #three {
         padding: 1.5em 1em;
       }
+			#two::after, #three::before { height: 70px; }
     }
 
     /* What's going on section styles */

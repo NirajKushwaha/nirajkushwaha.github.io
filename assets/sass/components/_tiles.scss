@@ -165,12 +165,7 @@
 				height: 16em;
 				max-height: none;
 				min-height: 0;
-
-				h3 {
-					font-size: 1.5em;
-				}
-			}
-		}
+			width: 100% !important;
 
 		@include breakpoint('<=xsmall') {
 			display: block;

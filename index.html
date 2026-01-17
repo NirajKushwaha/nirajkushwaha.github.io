@@ -44,6 +44,12 @@
 			position: relative;
     }
 
+    /* Remove the default top border so the custom fades between #two and #three stay smooth */
+    #main > #two,
+    #main > #three {
+      border-top: 0;
+    }
+
 		/* Soft fade between #two and #three to avoid a hard seam */
 		#two::after {
 			content: "";

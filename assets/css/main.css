@@ -3478,6 +3478,20 @@ input, select, textarea {
 					text-transform: uppercase;
 				}
 
+				#banner > .inner .content .opportunity-note {
+					display: inline-block;
+					padding: 0.65em 1.1em;
+					margin-bottom: 1.1em;
+					border: 1px solid rgba(255, 255, 255, 0.45);
+					background-color: rgba(255, 255, 255, 0.1);
+					box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+					font-size: 0.62em;
+					font-weight: 700;
+					letter-spacing: 0.18em;
+					line-height: 1.7;
+					text-transform: uppercase;
+				}
+
 		#banner.major {
 			height: 75vh;
 			min-height: 30em;
@@ -3536,6 +3550,34 @@ input, select, textarea {
 
 		}
 
+		@media screen and (min-width: 737px) and (max-height: 900px) {
+
+			#banner {
+				padding: 5em 0 1.5em 0 ;
+				height: auto;
+				margin-bottom: -2.75em;
+				max-height: none;
+				min-height: 0;
+				top: -2.75em;
+			}
+
+				#banner > .inner .content {
+					display: block;
+				}
+
+					#banner > .inner .content > * {
+						margin-right: 0;
+						margin-bottom: 2em;
+					}
+
+			#banner.major {
+				height: auto;
+				min-height: 0;
+				max-height: none;
+			}
+
+		}
+
 		@media screen and (max-width: 736px) {
 
 			#banner {
@@ -3558,6 +3600,12 @@ input, select, textarea {
 					#banner > .inner .content > * {
 						margin-right: 0;
 						margin-bottom: 2em;
+					}
+
+					#banner > .inner .content .opportunity-note {
+						font-size: 0.68em;
+						letter-spacing: 0.14em;
+						margin-bottom: 1.35em;
 					}
 
 				#banner.major {

@@ -8,7 +8,8 @@
 
 	#banner {
 		@include vendor('align-items', 'center');
-		@include vendor('background-image', 'url("../../images/banner.jpg")');
+		background-color: #10152c;
+		background-image: none;
 		@include vendor('display', 'flex');
 		@include padding(4em, 0, (2em, 0, 0, 0));
 		background-attachment: fixed;
@@ -24,6 +25,22 @@
 		position: relative;
 		top: -3.25em;
 
+		#banner-particles {
+			height: 100%;
+			left: 0;
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 0;
+
+			.pg-canvas {
+				display: block;
+				height: 100%;
+				width: 100%;
+			}
+		}
+
 		&:after {
 			@include vendor('transition', 'opacity #{_duration(banner)} ease');
 			@include vendor('transition-delay', '0.75s');
@@ -33,7 +50,7 @@
 			display: block;
 			height: 100%;
 			left: 0;
-			opacity: 0.85;
+			opacity: 0.55;
 			position: absolute;
 			top: 0;
 			width: 100%;

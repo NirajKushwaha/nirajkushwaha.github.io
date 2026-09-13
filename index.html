@@ -248,12 +248,8 @@
  
 				<!-- Banner -->
 				<section id="banner" class="major">
+					<div id="banner-particles" aria-hidden="true"></div>
 					<div class="inner">
-						
-						<span class="image">
-							<img src="assets/images/banner_crystalnetwork_low.png" alt="" />
-						</span>
-						
 
 						<header class="major">
 							<img src="assets/images/niraj.jpg" alt="Profile Picture" style="width: 200px; height: 200px;">
@@ -623,6 +619,18 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
+			<script src="ParticleGround-Portfolio/js/jquery.particleground.js"></script>
+			<script>
+				document.addEventListener('DOMContentLoaded', function() {
+					particleground(document.getElementById('banner-particles'), {
+						dotColor: '#9bf1ff',
+						lineColor: '#9bf1ff',
+						density: 12000,
+						particleRadius: 5,
+						proximity: 120
+					});
+				});
+			</script>
 			<script src="assets/js/main.js"></script>
 
 	</body>

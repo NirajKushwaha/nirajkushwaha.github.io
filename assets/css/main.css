@@ -3378,7 +3378,8 @@ input, select, textarea {
 		-webkit-align-items: center;
 		-ms-align-items: center;
 		align-items: center;
-		background-image: url("../../images/banner.jpg");
+		background-color: #10152c;
+		background-image: none;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -3398,6 +3399,22 @@ input, select, textarea {
 		top: -3.25em;
 	}
 
+		#banner #banner-particles {
+			height: 100%;
+			left: 0;
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 0;
+		}
+
+			#banner #banner-particles .pg-canvas {
+				display: block;
+				height: 100%;
+				width: 100%;
+			}
+
 		#banner:after {
 			-moz-transition: opacity 2.5s ease;
 			-webkit-transition: opacity 2.5s ease;
@@ -3413,7 +3430,7 @@ input, select, textarea {
 			display: block;
 			height: 100%;
 			left: 0;
-			opacity: 0.85;
+			opacity: 0.55;
 			position: absolute;
 			top: 0;
 			width: 100%;
